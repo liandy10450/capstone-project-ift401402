@@ -1,0 +1,31 @@
+{% extends 'JIT/CRUD_template.html'%}
+{% load static %}
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        
+        <input type="submit" name="Submit">
+    </form>
+{% endblock%}
+
+{% comment %}
+<!--
+{% extends 'JIT/vendor.html' %}
+
+{% block content %}
+    
+        <h2>Create Order</h2>
+        <form class="site-form" action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="create">
+        </form>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    
+{% endblock %}
+-->
+{% endcomment %}
